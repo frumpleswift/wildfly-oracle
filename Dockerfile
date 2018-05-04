@@ -2,9 +2,9 @@ FROM openshift/wildfly-110-centos7
 
 MAINTAINER Jonathan Hill <anfechtung@gmail.com>
 
-COPY oracle /wildfly/modules/com
+RUN mkdir /wildfly/modules/com/oracle
+COPY oracle /wildfly/modules/com/oracle
 COPY standalone.xml /wildfly/standalone/configuration
-COPY oracle /wildfly/modules/system/layers/base/com
 
 
 
